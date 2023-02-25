@@ -1,18 +1,19 @@
 <html>
-<body>
-  <h1>Hai baby!</h1>
-  <img src="https://c.tenor.com/Z8ezUHZzcLoAAAAC/love.gif" />
-  
-  <button id="btn_mau" onclick="alert('I LOVE YOU ❤❤')">Mau</button>&nbsp;
-  <button id="btn_gamau" onclick="gamau(this)" style="position: absolute">Gamau</button>
-</body>
-<script>
-  function gamau(id) {
-    const mau = document.getElementById("btn_mau");
-    const i = Math.floor(Math.random() * 246) + 55;
-    const j = Math.floor(Math.random() * 100) + mau.offsetTop;
-    id.style.left = i + "px";
-    id.style.top = j + "px";
-  }
-</script>
+  <title>Hai baby!</title>
+  <body>
+    <h1>Hai baby!</h1>
+    <img src="https://c.tenor.com/Z8ezUHZzcLoAAAAC/love.gif" />
+    <p>Maukah kamu menjadi couple ku?</p>
+    <button id="btn_mau" onclick="alert('I LOVE YOU ❤❤')">Mau</button>&nbsp;
+    <button id="btn_gamau" onclick="gamau(this)" style="position: absolute">Gamau</button>
+  </body>
+  <script>
+    function gamau(id) {
+      const mau = document.getElementById("btn_mau");
+      const i = Math.floor(Math.random() * 246) + 55;
+      const j = Math.floor(Math.random() * 100) + mau.offsetTop;
+      id.style.left = i + "px";
+      id.style.top = j + "px";
+    }
+  </script>
 </html>
