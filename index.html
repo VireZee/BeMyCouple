@@ -1,23 +1,39 @@
-<html>
-  <title>Hai baby!</title>
-  <audio controls autoplay loop>
+<!DOCTYPE html>
+<html lang="en">
+  <audio id="audio">
     <source src="Audio.mp3" type="audio/mp3">
-    Your browser does not support the audio element.
   </audio>
-  <body>
-    <h1>Hai baby!</h1>
-    <img src="https://c.tenor.com/Z8ezUHZzcLoAAAAC/love.gif" />
-    <h2>Maukah kamu menjadi couple ku?</h2>
-    <button id="btn_mau" onclick="alert('I LOVE YOU ❤❤')">Mau</button>&nbsp;
-    <button id="btn_gamau" onclick="gamau(this)" style="position: absolute">Gamau</button>
-  </body>
-  <script>
-    function gamau(id) {
-      const mau = document.getElementById("btn_mau");
-      const i = Math.floor(Math.random() * 246) + 55;
-      const j = Math.floor(Math.random() * 100) + mau.offsetTop;
-      id.style.left = i + "px";
-      id.style.top = j + "px";
-    }
-  </script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hai baby!</title>
+</head>
+<body>
+  <h1>Hai baby!</h1>
+  <img src="https://c.tenor.com/Z8ezUHZzcLoAAAAC/love.gif" />
+  <h2>Maukah kamu menjadi couple ku?</h2>
+  <button id="btn_mau" onclick="alert('I LOVE YOU ❤❤')">Mau</button>&nbsp;
+  <button id="btn_gamau" onclick="gamau(this)" style="position: absolute">Gamau</button>
+</body>
+<script>
+  const audio = document.getElementById("audio");
+  window.addEventListener("mouseover", playAudio);
+  window.addEventListener("click", playAudio);
+  window.addEventListener("contextmenu", playAudio);
+  window.addEventListener("scroll", playAudio);
+  window.addEventListener("touchmove", playAudio);
+  audio.addEventListener("ended", () => {
+    audio.play();
+  });
+  function playAudio() {
+    audio.play();
+  }
+  function gamau(id) {
+    const mau = document.getElementById("btn_mau");
+    const i = Math.floor(Math.random() * 246) + 55;
+    const j = Math.floor(Math.random() * 100) + mau.offsetTop;
+    id.style.left = i + "px";
+    id.style.top = j + "px";
+  }
+</script>
 </html>
