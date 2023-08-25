@@ -22,11 +22,14 @@
   window.addEventListener("contextmenu", playAudio);
   window.addEventListener("scroll", playAudio);
   window.addEventListener("touchmove", playAudio);
-  audio.addEventListener("ended", () => {
-    audio.play();
-  });
+  audio.addEventListener("ended", playAudio);
   function playAudio() {
     audio.play();
+    window.removeEventListener("mouseover", playAudio);
+    window.removeEventListener("click", playAudio);
+    window.removeEventListener("contextmenu", playAudio);
+    window.removeEventListener("scroll", playAudio);
+    window.removeEventListener("touchmove", playAudio);
   }
   function gamau(id) {
     const mau = document.getElementById("btn_mau");
