@@ -25,11 +25,6 @@
   audio.addEventListener("ended", playAudio);
   function playAudio() {
     audio.play();
-    window.removeEventListener("mouseover", playAudio);
-    window.removeEventListener("click", playAudio);
-    window.removeEventListener("contextmenu", playAudio);
-    window.removeEventListener("scroll", playAudio);
-    window.removeEventListener("touchmove", playAudio);
   }
   function gamau(id) {
     const mau = document.getElementById("btn_mau");
